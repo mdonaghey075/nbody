@@ -83,23 +83,7 @@ void calculateFPS()
 	}
 }
 
-void particleSolve() {
-	
-	for(int i = 0; i < npositions; i++) { // loop over particles
-		Particles[i].xforce = 0; // zero particles forces
-		Particles[i].yforce = 0;
-		Particles[i].zforce = 0;
-		for(int j = 0; j < npositions; j++) { // loops over all other particles  2 loops n2 complexity
-			if ( i != j) { // if particles arent the same
-				Particles[i].addForce(&Particles[j]); // add their forces
-			}
 
-		}
-		Particles[i].updatePosition(0.05); // update position 0.05 timestep
-	}
-
-
-}
 
 void bhSolve() {
 	octree->calculateMassAndCentre(octree);  // find mass and centre of mass of octree
@@ -120,8 +104,8 @@ void bhSolve() {
 
 void idle(){ // idle method for opengl
 	calculateFPS(); 
-	particleSolve();
-	//bhSolve();
+
+	bhSolve();
 	glutPostRedisplay(); // calls a redisplay for opengl
 
 }
