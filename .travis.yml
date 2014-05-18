@@ -8,9 +8,9 @@ compiler:
 
 
 script: 
- - cd /mdonaghey075/nbody
+ - cd mdonaghey075/nbody
  - cmake /
- - cmake /build
+ - cmake ../build
 
 notifications:
   recipients:
