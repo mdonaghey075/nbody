@@ -8,7 +8,7 @@ compiler:
 
 
 script: 
-
+ - cd /nbody
  - cmake ../
  - cmake /build
 
