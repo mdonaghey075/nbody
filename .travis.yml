@@ -6,13 +6,12 @@ compiler:
   - gcc
   - clang
 
-before_script:
-  - cd /mdonaghey075/nbody
+
 
 script: 
 
- - cmake /
- - cmake ../build
+ - cmake /mdonaghey075/nbody
+ - cmake /mdonaghey075/nbody/build
 
 notifications:
   recipients:
