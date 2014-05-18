@@ -6,9 +6,11 @@ compiler:
   - gcc
   - clang
 
-
+  before_script:
+	 - cd mdonaghey075/nbody
+	 
 script: 
- - cd mdonaghey075/nbody
+
  - cmake /
  - cmake ../build
 
