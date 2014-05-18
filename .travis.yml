@@ -10,8 +10,8 @@ compiler:
 
 script: 
 
- - cmake 
- - cmake /build
+ - cmake ..
+ - cmake build
 
 notifications:
   recipients:
