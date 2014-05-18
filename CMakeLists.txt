@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 project(nbody)
-add_executable(nbody main.cpp particle.h ocTree.h posvec.h)
+add_executable(nbody main.cpp Particle.h ocTree.h posvec.h)
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
