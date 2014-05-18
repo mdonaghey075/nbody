@@ -7,7 +7,7 @@ compiler:
   - clang
 
   before_script:
-	 - cd mdonaghey075/nbody
+- cd mdonaghey075/nbody
 	 
 script: 
 
