@@ -13,7 +13,7 @@ compiler:
 script: 
 
  - cmake .
- - cpack -C CPackConfig.cmake
+ #- cpack -C CPackConfig.cmake
  
 notifications:
   recipients:
