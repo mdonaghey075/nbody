@@ -18,7 +18,7 @@ public:
 		yforce = 0;
 		zforce = 0;
 		xvelocity = 0;
-		yvelocity = 0;
+		yvelocity = 0
 		zvelocity = 0;
 		//mass = sqrtf(rand()); // sets a random mass
 		mass = 5;
