@@ -120,8 +120,8 @@ void bhSolve() {
 
 void idle(){ // idle method for opengl
 	calculateFPS(); 
-	//particleSolve();
-	bhSolve();
+	particleSolve();
+	//bhSolve();
 	glutPostRedisplay(); // calls a redisplay for opengl
 
 }
