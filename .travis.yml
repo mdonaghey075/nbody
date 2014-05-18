@@ -9,7 +9,7 @@ compiler:
 
 script: 
  - cd /mdonaghey075/nbody
- - cmake ../
+ - cmake /
  - cmake /build
 
 notifications:
