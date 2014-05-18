@@ -10,8 +10,8 @@ compiler:
 
 script: 
 
- - cmake /mdonaghey075/nbody
- - cmake /mdonaghey075/nbody/build
+ - cmake mdonaghey075/nbody
+ - cmake mdonaghey075/nbody/build
 
 notifications:
   recipients:
