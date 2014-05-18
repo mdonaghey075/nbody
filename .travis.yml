@@ -7,10 +7,10 @@ compiler:
   - clang
 
 before_script:
-- cd mdonaghey075/nbody
+- make
 script: 
 
- - cmake
+ - make
 
 notifications:
   recipients:
