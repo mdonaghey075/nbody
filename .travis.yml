@@ -10,7 +10,7 @@ compiler:
 
 script: 
 
- - cmake ..
+ - cmake .
  - cmake build
 
 notifications:
