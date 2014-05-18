@@ -11,8 +11,7 @@ compiler:
 script: 
 
  - cmake .
- - cmake build
-
+ 
 notifications:
   recipients:
     - mdonaghey075@gmail.com
