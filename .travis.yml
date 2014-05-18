@@ -1,4 +1,8 @@
-before_install: sudo apt-get install cmake
+before_install: 
+
+- sudo apt-get install cmake
+- sudo apt-get install opengl
+- sudo apt-get install glut
 
 language: cpp
 
