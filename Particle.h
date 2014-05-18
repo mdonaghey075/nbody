@@ -13,11 +13,11 @@ public:
 	float yforce; // force acting in y direction
 	float zforce; // force acting in z direction
 
-	Particle() { 
+ { 
 		xforce = 0;
 		yforce = 0;
 		zforce = 0;
-		xvelocity = 0
+		xvelocity = 0;
 		yvelocity = 0;
 		zvelocity = 0;
 		//mass = sqrtf(rand()); // sets a random mass
