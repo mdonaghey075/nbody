@@ -13,7 +13,7 @@ public:
 	float yforce; // force acting in y direction
 	float zforce; // force acting in z direction
 
- { 
+ Particle(){ 
 		xforce = 0;
 		yforce = 0;
 		zforce = 0;
