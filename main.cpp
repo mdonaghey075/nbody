@@ -4,7 +4,7 @@
 #include<iostream>
 #include "posVec.h"
 #include "Particle.h"
-#include "ocTree.h"
+
 
 
 std::vector<posVec> positions;
@@ -47,7 +47,7 @@ posVec randPosVec(){ // Random vector
 void initialise() {
 	// Create an Octree centered at 250, 250, 250
 	// with physical dimension 10000x10000x10000
-	octree = new ocTree(posVec(250,250,250), posVec(5000,5000,5000));
+	
 
 	// Create 200 positions vectors
 	npositions = 300;
@@ -58,7 +58,7 @@ void initialise() {
 	Particles = new Particle[npositions]; // array to hold particles initialised to the size of number of positions/particles
 	for (int i=0; i<npositions; ++i) { // loop over number of positions
 		Particles[i].setPosition(positions[i]); // set position of particle at i
-		octree->insert(&Particles[i]); // insert particle in to oct tree
+	
 	}	
 
 	
@@ -101,27 +101,12 @@ void particleSolve() {
 
 }
 
-void bhSolve() {
-	octree->calculateMassAndCentre(octree);  // find mass and centre of mass of octree
-	
-	for(int i = 0; i < npositions; i++) { // loops over particles
-		Particles[i].xforce = 0; // zero the particles forces
-		Particles[i].yforce = 0;
-		Particles[i].zforce = 0;
-		octree->Calculateforce(octree, &Particles[i]); // calculate the force acting on the particle from all others
-		Particles[i].updatePosition(0.06); // update position
-	}
-	octree->~ocTree(); // call destructor or octree to clean up
-	octree = new ocTree(posVec(250,250,250), posVec(5000,5000,5000)); // initialise a new octree as octree
-	for(int i = 0; i < npositions; i++) { // loops over the particles
-		octree->insert(&Particles[i]); // reinsert to octree
-	}
-}	
+
 
 void idle(){ // idle method for opengl
 	calculateFPS(); 
-	//particleSolve();
-	bhSolve();
+	particleSolve();
+
 	glutPostRedisplay(); // calls a redisplay for opengl
 
 }
