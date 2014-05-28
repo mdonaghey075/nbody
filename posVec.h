@@ -3,7 +3,7 @@ struct posVec {
 	
 		struct {
 			
-			float x; // float to hold x co ord
+			float x; // float to hold x  co ord
 			float y; // float to hold y co ord
 			float z; // float to hold x co ord
 				
